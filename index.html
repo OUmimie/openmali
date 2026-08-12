@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="OPEN MALI – Oui, Pour une Enfance Noble. Première association humanitaire de jeunes du Mali, fondée en 2002 à Bamako. Éducation, santé, droits humains, autonomisation des femmes." />
+  <meta name="keywords" content="ONG Mali, humanitaire, enfants Mali, éducation Mali, parrainage scolaire, OPEN MALI" />
+  <meta property="og:title" content="OPEN MALI – Oui, Pour une Enfance Noble" />
+  <meta property="og:description" content="Première ONG humanitaire de jeunes du Mali. Rejoignez-nous pour transformer des vies." />
+  <meta property="og:type" content="website" />
+  <title>OPEN MALI – Oui, Pour une Enfance Noble | ONG Humanitaire au Mali</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<header class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#accueil" class="nav-logo">
+      <img src="logo.png" alt="OPEN MALI Logo" class="nav-logo-img" />
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#accueil" class="nav-link active" data-i18n="nav_home">Accueil</a>
+      <a href="#qui-sommes-nous" class="nav-link" data-i18n="nav_about">Qui sommes-nous</a>
+      <a href="#domaines" class="nav-link" data-i18n="nav_domains">Nos Domaines</a>
+      <a href="#actualites" class="nav-link" data-i18n="nav_news">Actualités</a>
+      <a href="#projets" class="nav-link" data-i18n="nav_projects">Projets</a>
+      <a href="#transparence" class="nav-link" data-i18n="nav_transparency">Transparence</a>
+      <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="btn-lang" id="langToggle" onclick="toggleLang()">🌐 EN</button>
+      <a href="#don" class="btn-primary" data-i18n="nav_donate">💚 Faire un don</a>
+      <button class="nav-toggle" id="navToggle" onclick="toggleNav()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="accueil">
+  <div class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="hero-particles" id="particles"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      <span data-i18n="hero_badge">ONG au Mali depuis 2002</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="hero-slogan-oui" data-i18n="hero_slogan_oui">Oui</span><span data-i18n="hero_title_for"> pour une</span><br/>
+      <span class="hero-highlight" data-i18n="hero_title_highlight">Enfance Noble</span>
+    </h1>
+    <p class="hero-subtitle" data-i18n="hero_subtitle">
+      OPEN MALI est la première association humanitaire de jeunes du Mali. Depuis 2002, nous œuvrons pour l'éducation, la santé et les droits humains.
+    </p>
+    <div class="hero-ctas">
+      <a href="#don" class="btn-hero-primary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        <span data-i18n="hero_btn_donate">Faire un don</span>
+      </a>
+      <a href="#parrainage" class="btn-hero-secondary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        <span data-i18n="hero_btn_sponsor">Parrainer un enfant</span>
+      </a>
+      <a href="#qui-sommes-nous" class="btn-hero-outline" data-i18n="hero_btn_discover">Découvrir notre mission</a>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-indicator">
+        <div class="scroll-dot"></div>
+      </div>
+      <span data-i18n="hero_scroll">Défiler</span>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat-item">
+      <span class="stat-number" data-target="3500">0</span>
+      <span class="stat-label" data-i18n="hero_stat_children">Enfants scolarisés</span>
+    </div>
+    <div class="hero-stat-divider"></div>
+    <div class="hero-stat-item">
+      <span class="stat-number" data-target="18778">0</span>
+      <span class="stat-label" data-i18n="hero_stat_cow">Bénéficiaires COW</span>
+    </div>
+    <div class="hero-stat-divider"></div>
+    <div class="hero-stat-item">
+      <span class="stat-number" data-target="24">0</span>
+      <span class="stat-label" data-i18n="hero_stat_years">Années d'action</span>
+    </div>
+    <div class="hero-stat-divider"></div>
+    <div class="hero-stat-item">
+      <span class="stat-number" data-target="8">0</span>
+      <span class="stat-label" data-i18n="hero_stat_regions">Régions couvertes</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUI SOMMES-NOUS ===== -->
+<section class="about" id="qui-sommes-nous">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-content">
+        <div class="section-label" data-i18n="about_label">Qui sommes-nous</div>
+        <h2 class="section-title" data-i18n="about_title">La première association humanitaire de jeunes au Mali</h2>
+        <p class="about-text" data-i18n="about_p1">
+          L'association <strong>« Oui, Pour une Enfance Noble Mali »</strong>, en abrégé <strong>OPEN Mali</strong>, est la première association humanitaire de jeunes au Mali, fondée en <strong>2002 à Bamako</strong> par six jeunes lycéens de 15 à 16 ans. C'est une association à but non lucratif, humanitaire, apolitique et laïque disposant d'un récépissé délivré par le <em>Ministère de l'Administration Territoriale et des Collectivités Locales</em>.
+        </p>
+        <p class="about-text" data-i18n="about_p2">
+          Elle a été érigée en <strong>ONG</strong> par la signature de l'accord-cadre du <strong>25 juin 2019</strong> avec le Gouvernement de la République du Mali, puis modifié par l'avenant du <strong>13 février 2026</strong>. OPEN Mali est présente sur l'ensemble du territoire Malien.
+        </p>
+        <p class="about-text" data-i18n="about_p3">
+          OPEN Mali a siégé à l'<strong>Équipe Humanitaire Pays (EHP)</strong> en sa qualité d'association représentante des jeunes, déléguée par la plateforme des ONG Nationales actives dans l'humanitaire <strong>(PONAH)</strong>. Elle est membre de plusieurs <em>Clusters</em>.
+        </p>
+        <div class="about-values">
+          <div class="value-item">
+            <div class="value-icon">🎯</div>
+            <div>
+              <strong data-i18n="about_mission_title">Notre Mission</strong>
+              <p data-i18n="about_mission_desc">La mission de l'association/ONG OPEN Mali est de venir en aide aux personnes en situation difficile touchées par la pauvreté, les violences, les conflits, les catastrophes naturelles et climatiques. Elle apporte son assistance aux personnes qui en ont besoin en les aidant à accéder à leurs droits les plus élémentaires et à construire un avenir durable.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">🤝</div>
+            <div>
+              <strong data-i18n="about_commitment_title">Notre Présence & Engagement</strong>
+              <p data-i18n="about_commitment_desc">L’association OPEN Mali est présente sur l’ensemble du territoire Malien. OPEN Mali a siégé à l’Equipe Humanitaire Pays (EHP) en sa qualité d’association représentante des jeunes, déléguée par la plateforme des ONG Nationales actives dans l’humanitaire (PONAH). Elle est membre de plusieurs Clusters.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">💎</div>
+            <div>
+              <strong data-i18n="about_values_title">Nos Valeurs</strong>
+              <p data-i18n="about_values_desc">Humanitaire, apolitique, laïque — intégrité, solidarité et engagement citoyen</p>
+            </div>
+          </div>
+        </div>
+        <a href="#projets" class="btn-secondary" data-i18n="about_btn_projects">Voir nos réalisations →</a>
+      </div>
+      <div class="about-visual">
+        <div class="about-card-main">
+          <div class="about-card-icon">🇲🇱</div>
+          <h3>OPEN MALI</h3>
+          <p data-i18n="about_tagline">Oui, Pour une Enfance Noble</p>
+          <div class="about-timeline">
+            <div class="timeline-item">
+              <span class="timeline-year">2002</span>
+              <span class="timeline-event" data-i18n="about_t1">Fondation par 6 lycéens à Bamako</span>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2010</span>
+              <span class="timeline-event" data-i18n="about_t2">Lancement du parrainage scolaire</span>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2015</span>
+              <span class="timeline-event" data-i18n="about_t3">Projet Children Of the World (COW)</span>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2019</span>
+              <span class="timeline-event" data-i18n="about_t4">Accord-cadre ONG avec le Gouvernement</span>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2022</span>
+              <span class="timeline-event" data-i18n="about_t5">Statut consultatif ONU — EHP & PONAH</span>
+            </div>
+            <div class="timeline-item active">
+              <span class="timeline-year">2026</span>
+              <span class="timeline-event" data-i18n="about_t6">Avenant accord-cadre — 24 ans d'impact</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-card-mini">
+          <div class="mini-icon">🌍</div>
+          <div>
+            <strong data-i18n="about_card_mini_title">Présence nationale & internationale</strong>
+            <p data-i18n="about_card_mini_desc">Territoire malien entier · EHP · PONAH · Clusters</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DOMAINES D'INTERVENTION ===== -->
+<section class="domains" id="domaines">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label" data-i18n="domains_label">Nos Domaines d'Intervention</div>
+      <h2 class="section-title" data-i18n="domains_title">6 piliers pour transformer des vies</h2>
+      <p class="section-subtitle" data-i18n="domains_subtitle">De l'éducation à l'autonomisation des femmes, OPEN MALI intervient là où les besoins sont les plus criants.</p>
+    </div>
+    <div class="domains-grid">
+      <div class="domain-card" data-domain="education">
+        <div class="domain-icon">📚</div>
+        <h3 data-i18n="domain_edu_title">Éducation</h3>
+        <p data-i18n="domain_edu_desc">Scolarisation et parrainage d'enfants vulnérables. Plus de 3 500 enfants accompagnés vers l'école.</p>
+        <div class="domain-stat" data-i18n="domain_edu_stat">3 500+ enfants scolarisés</div>
+        <a href="#projets" class="domain-link" data-i18n="domain_learn_more">En savoir plus →</a>
+      </div>
+      <div class="domain-card" data-domain="sante">
+        <div class="domain-icon">🏥</div>
+        <h3 data-i18n="domain_health_title">Santé</h3>
+        <p data-i18n="domain_health_desc">Campagnes de prévention, lutte contre le paludisme et accès aux soins pour les communautés rurales.</p>
+        <div class="domain-stat" data-i18n="domain_health_stat">Lutte anti-paludisme</div>
+        <a href="#projets" class="domain-link" data-i18n="domain_learn_more">En savoir plus →</a>
+      </div>
+      <div class="domain-card" data-domain="citoyennete">
+        <div class="domain-icon">🗳️</div>
+        <h3 data-i18n="domain_cit_title">Citoyenneté</h3>
+        <p data-i18n="domain_cit_desc">Formation civique, participation des jeunes à la vie publique et promotion de la démocratie participative.</p>
+        <div class="domain-stat" data-i18n="domain_cit_stat">Jeunes engagés</div>
+        <a href="#projets" class="domain-link" data-i18n="domain_learn_more">En savoir plus →</a>
+      </div>
+      <div class="domain-card" data-domain="urgence">
+        <div class="domain-icon">🆘</div>
+        <h3 data-i18n="domain_urg_title">Aide d'urgence</h3>
+        <p data-i18n="domain_urg_desc">Réponse rapide aux crises humanitaires, distribution d'aide alimentaire et assistance aux déplacés.</p>
+        <div class="domain-stat" data-i18n="domain_urg_stat">Réponse aux crises</div>
+        <a href="#projets" class="domain-link" data-i18n="domain_learn_more">En savoir plus →</a>
+      </div>
+      <div class="domain-card" data-domain="droits">
+        <div class="domain-icon">⚖️</div>
+        <h3 data-i18n="domain_rights_title">Droits Humains & Culture</h3>
+        <p data-i18n="domain_rights_desc">Défense des droits fondamentaux, lutte contre les violences basées sur le genre (VBG) et promotion culturelle.</p>
+        <div class="domain-stat" data-i18n="domain_rights_stat">Défense des droits</div>
+        <a href="#projets" class="domain-link" data-i18n="domain_learn_more">En savoir plus →</a>
+      </div>
+      <div class="domain-card" data-domain="femmes">
+        <div class="domain-icon">💪</div>
+        <h3 data-i18n="domain_women_title">Autonomisation des Femmes</h3>
+        <p data-i18n="domain_women_desc">Renforcement des capacités économiques, formation professionnelle et leadership féminin au Mali.</p>
+        <div class="domain-stat" data-i18n="domain_women_stat">PAFFIPE & SARE</div>
+        <a href="#projets" class="domain-link" data-i18n="domain_learn_more">En savoir plus →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ACTUALITÉS ===== -->
+<section class="news" id="actualites">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label" data-i18n="news_label">Actualités & Médias</div>
+      <h2 class="section-title" data-i18n="news_title">Dernières nouvelles d'OPEN MALI</h2>
+    </div>
+    <div class="news-filters">
+      <button class="filter-btn active" onclick="filterNews(this, 'all')" data-i18n="news_filter_all">Tous</button>
+      <button class="filter-btn" onclick="filterNews(this, 'education')" data-i18n="news_filter_edu">Éducation</button>
+      <button class="filter-btn" onclick="filterNews(this, 'sante')" data-i18n="news_filter_health">Santé</button>
+      <button class="filter-btn" onclick="filterNews(this, 'femmes')" data-i18n="news_filter_women">Femmes</button>
+      <button class="filter-btn" onclick="filterNews(this, 'urgence')" data-i18n="news_filter_urg">Urgence</button>
+    </div>
+    <div class="news-grid" id="newsGrid">
+      <div class="news-card" data-category="education">
+        <div class="news-img">
+          <img src="news-education.jpg" alt="Enfants en classe - OPEN MALI" class="news-photo" />
+          <span class="news-tag" data-i18n="news_1_tag">Éducation</span>
+        </div>
+        <div class="news-content">
+          <div class="news-date" data-i18n="news_1_date">15 juillet 2026</div>
+          <h3 data-i18n="news_1_title">Rentrée scolaire 2026 : 450 nouveaux filleuls intégrés dans le programme</h3>
+          <p data-i18n="news_1_desc">OPEN MALI célèbre une rentrée record avec 450 nouveaux enfants intégrés dans son programme de parrainage scolaire, grâce à la générosité de ses donateurs.</p>
+          <a href="#" class="news-link" data-i18n="news_read_more">Lire la suite →</a>
+        </div>
+      </div>
+      <div class="news-card" data-category="sante">
+        <div class="news-img">
+          <img src="news-sante.jpg" alt="Médecin consultation - OPEN MALI" class="news-photo" />
+          <span class="news-tag" data-i18n="news_2_tag">Santé</span>
+        </div>
+        <div class="news-content">
+          <div class="news-date" data-i18n="news_2_date">3 juin 2026</div>
+          <h3 data-i18n="news_2_title">Campagne anti-paludisme : 2 000 moustiquaires distribuées dans la région de Mopti</h3>
+          <p data-i18n="news_2_desc">En partenariat avec le ministère de la Santé, OPEN MALI a distribué 2 000 moustiquaires imprégnées dans les villages les plus touchés par le paludisme.</p>
+          <a href="#" class="news-link" data-i18n="news_read_more">Lire la suite →</a>
+        </div>
+      </div>
+      <div class="news-card" data-category="femmes">
+        <div class="news-img femmes-img">
+          <span class="news-tag" data-i18n="news_3_tag">Femmes</span>
+          <div class="news-overlay">💪</div>
+        </div>
+        <div class="news-content">
+          <div class="news-date" data-i18n="news_3_date">20 mai 2026</div>
+          <h3 data-i18n="news_3_title">PAFFIPE : 120 femmes obtiennent leur certification en entrepreneuriat</h3>
+          <p data-i18n="news_3_desc">Une cérémonie de remise de diplômes s'est tenue à Bamako pour célébrer 120 femmes ayant terminé avec succès la formation PAFFIPE en entrepreneuriat rural.</p>
+          <a href="#" class="news-link" data-i18n="news_read_more">Lire la suite →</a>
+        </div>
+      </div>
+    </div>
+    <div class="news-more">
+      <a href="#" class="btn-secondary" data-i18n="news_btn_all">Voir toutes les actualités →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CHIFFRES CLÉS ===== -->
+<section class="impact" id="impact">
+  <div class="impact-bg"></div>
+  <div class="container">
+    <div class="section-header light">
+      <div class="section-label light" data-i18n="impact_label">Notre Impact</div>
+      <h2 class="section-title" data-i18n="impact_title">24 ans de transformations mesurables</h2>
+    </div>
+    <div class="impact-grid">
+      <div class="impact-item">
+        <div class="impact-number"><span class="counter" data-target="3500">3 500</span>+</div>
+        <div class="impact-label" data-i18n="impact_1_label">Enfants scolarisés</div>
+        <div class="impact-desc" data-i18n="impact_1_desc">via le programme de parrainage scolaire</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number"><span class="counter" data-target="18778">18 778</span></div>
+        <div class="impact-label" data-i18n="impact_2_label">Bénéficiaires COW</div>
+        <div class="impact-desc" data-i18n="impact_2_desc">Children Of the World</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number"><span class="counter" data-target="24">24</span></div>
+        <div class="impact-label" data-i18n="impact_3_label">Années d'action</div>
+        <div class="impact-desc" data-i18n="impact_3_desc">au service des Maliens</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number"><span class="counter" data-target="8">8</span></div>
+        <div class="impact-label" data-i18n="impact_4_label">Régions couvertes</div>
+        <div class="impact-desc" data-i18n="impact_4_desc">sur tout le territoire national</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number"><span class="counter" data-target="7">7</span></div>
+        <div class="impact-label" data-i18n="impact_5_label">Programmes actifs</div>
+        <div class="impact-desc" data-i18n="impact_5_desc">en cours de déploiement</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-number"><span class="counter" data-target="3">3</span></div>
+        <div class="impact-label" data-i18n="impact_6_label">Partenaires intl.</div>
+        <div class="impact-desc" data-i18n="impact_6_desc">Diakonia, FCIL Canada, ONU</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAIRE UN DON ===== -->
+<section class="donation" id="don">
+  <div class="container">
+    <div class="donation-grid">
+      <div class="donation-info">
+        <div class="section-label" data-i18n="don_label">Faire un don</div>
+        <h2 class="section-title" data-i18n="don_title">Votre générosité change des vies</h2>
+        <p data-i18n="don_desc">Chaque don, petit ou grand, permet à OPEN MALI de continuer ses actions sur le terrain. Soutenez l'éducation, la santé et l'autonomisation des populations maliennes.</p>
+        <div class="donation-uses">
+          <div class="use-item">
+            <span>🎓</span>
+            <span data-i18n="don_use_1"><strong>25 000 FCFA</strong> – Parrainez un enfant pendant un an</span>
+          </div>
+          <div class="use-item">
+            <span>🏥</span>
+            <span data-i18n="don_use_2"><strong>10 000 FCFA</strong> – Moustiquaire pour une famille</span>
+          </div>
+          <div class="use-item">
+            <span>📚</span>
+            <span data-i18n="don_use_3"><strong>5 000 FCFA</strong> – Kit scolaire complet</span>
+          </div>
+        </div>
+        <div class="payment-methods">
+          <h4 data-i18n="don_payment_title">Modes de paiement disponibles</h4>
+          <div class="payment-icons">
+            <div class="payment-badge orange" data-i18n="don_pay_orange">📱 Orange Money</div>
+            <div class="payment-badge green" data-i18n="don_pay_card">💳 Carte Bancaire</div>
+          </div>
+        </div>
+      </div>
+      <div class="donation-form-container">
+        <div class="donation-form">
+          <h3 data-i18n="don_form_title">Choisissez votre don</h3>
+          <div class="amount-selector">
+            <div class="amount-label" data-i18n="don_amount_label">Montant (FCFA)</div>
+            <div class="amount-options">
+              <button class="amount-btn" onclick="selectAmount(this, 5000)">5 000</button>
+              <button class="amount-btn active" onclick="selectAmount(this, 10000)">10 000</button>
+              <button class="amount-btn" onclick="selectAmount(this, 25000)">25 000</button>
+              <button class="amount-btn" onclick="selectAmount(this, 50000)">50 000</button>
+            </div>
+            <input type="number" id="customAmount" class="amount-input" data-i18n-placeholder="don_custom_placeholder" placeholder="Autre montant..." />
+          </div>
+          <div class="frequency-selector">
+            <div class="amount-label" data-i18n="don_freq_label">Fréquence</div>
+            <div class="freq-options">
+              <button class="freq-btn active" onclick="selectFreq(this, 'ponctuel')" data-i18n="don_freq_once">Ponctuel</button>
+              <button class="freq-btn" onclick="selectFreq(this, 'mensuel')" data-i18n="don_freq_monthly">Mensuel</button>
+            </div>
+          </div>
+          <div class="project-selector">
+            <div class="amount-label" data-i18n="don_project_label">Projet à soutenir</div>
+            <select id="donProject" class="project-select">
+              <option value="general" data-i18n="don_opt_general">Don général – Là où le besoin est le plus urgent</option>
+              <option value="parrainage" data-i18n="don_opt_sponsor">Programme de parrainage scolaire</option>
+              <option value="sante" data-i18n="don_opt_health">Santé – Lutte anti-paludisme</option>
+              <option value="femmes" data-i18n="don_opt_women">Autonomisation des femmes</option>
+              <option value="urgence" data-i18n="don_opt_urg">Aide d'urgence</option>
+            </select>
+          </div>
+          <button class="btn-donate" id="donateBtn" onclick="processDonation()">
+            💚 Je fais un don de <span id="donateAmount">10 000</span> FCFA
+          </button>
+          <p class="donation-security" data-i18n="don_security">🔒 Paiement 100% sécurisé · Reçu par e-mail</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PARRAINAGE ===== -->
+<section class="sponsorship" id="parrainage">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label" data-i18n="spons_label">Parrainage d'enfants</div>
+      <h2 class="section-title" data-i18n="spons_title">Offrez un avenir à un enfant</h2>
+      <p class="section-subtitle" data-i18n="spons_subtitle">Pour seulement 25 000 FCFA par an, vous permettez à un enfant vulnérable de rester à l'école et de construire son avenir.</p>
+    </div>
+    <div class="sponsorship-grid">
+      <div class="sponsorship-info">
+        <div class="how-it-works">
+          <h3 data-i18n="spons_how_title">Comment ça fonctionne ?</h3>
+          <div class="step">
+            <div class="step-num">01</div>
+            <div>
+              <strong data-i18n="spons_step1_title">Choisissez votre région</strong>
+              <p data-i18n="spons_step1_desc">Sélectionnez la zone géographique où vous souhaitez avoir un impact</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">02</div>
+            <div>
+              <strong data-i18n="spons_step2_title">Remplissez le formulaire</strong>
+              <p data-i18n="spons_step2_desc">Vos coordonnées et préférences en quelques minutes</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">03</div>
+            <div>
+              <strong data-i18n="spons_step3_title">Recevez le profil de votre filleul</strong>
+              <p data-i18n="spons_step3_desc">OPEN MALI vous met en relation avec un enfant identifié</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">04</div>
+            <div>
+              <strong data-i18n="spons_step4_title">Suivez son parcours</strong>
+              <p data-i18n="spons_step4_desc">Rapports réguliers sur les progrès scolaires de l'enfant parrainé</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sponsorship-form-container">
+        <form class="sponsorship-form" id="sponsorshipForm" onsubmit="submitSponsorship(event)">
+          <h3 data-i18n="spons_form_title">Demande de parrainage</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="sponsorFirstName" data-i18n="spons_lbl_fname">Prénom *</label>
+              <input type="text" id="sponsorFirstName" required data-i18n-placeholder="spons_ph_fname" placeholder="Votre prénom" />
+            </div>
+            <div class="form-group">
+              <label for="sponsorLastName" data-i18n="spons_lbl_lname">Nom *</label>
+              <input type="text" id="sponsorLastName" required data-i18n-placeholder="spons_ph_lname" placeholder="Votre nom" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="sponsorEmail" data-i18n="spons_lbl_email">E-mail *</label>
+            <input type="email" id="sponsorEmail" required data-i18n-placeholder="spons_ph_email" placeholder="votre@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="sponsorPhone" data-i18n="spons_lbl_phone">Téléphone</label>
+            <input type="tel" id="sponsorPhone" data-i18n-placeholder="spons_ph_phone" placeholder="+223..." />
+          </div>
+          <div class="form-group">
+            <label for="sponsorRegion" data-i18n="spons_lbl_region">Région préférée</label>
+            <select id="sponsorRegion">
+              <option value="" data-i18n="spons_opt_all_regions">Toute région</option>
+              <option value="bamako">Bamako</option>
+              <option value="kayes">Kayes</option>
+              <option value="koulikoro">Koulikoro</option>
+              <option value="sikasso">Sikasso</option>
+              <option value="segou">Ségou</option>
+              <option value="mopti">Mopti</option>
+              <option value="tombouctou">Tombouctou</option>
+              <option value="gao">Gao</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-sponsor" data-i18n="spons_btn_submit">🤝 Envoyer ma demande</button>
+          <p class="form-note" data-i18n="spons_note">Un responsable OPEN MALI vous contactera sous 48h</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BÉNÉVOLAT ===== -->
+<section class="volunteer" id="benevolat">
+  <div class="volunteer-bg"></div>
+  <div class="container">
+    <div class="volunteer-grid">
+      <div class="volunteer-info">
+        <div class="section-label light" data-i18n="vol_label">Bénévolat & Adhésion</div>
+        <h2 class="section-title light" data-i18n="vol_title">Rejoignez l'équipe OPEN MALI</h2>
+        <p class="volunteer-desc" data-i18n="vol_desc">Votre temps et vos compétences sont précieux. Rejoignez nos équipes sur le terrain ou en ligne et contribuez à notre mission humanitaire.</p>
+        <div class="volunteer-missions">
+          <div class="mission-item" data-i18n="vol_m1">🏫 Animation éducative dans les écoles</div>
+          <div class="mission-item" data-i18n="vol_m2">🏥 Sensibilisation santé communautaire</div>
+          <div class="mission-item" data-i18n="vol_m3">💻 Appui digital et communication</div>
+          <div class="mission-item" data-i18n="vol_m4">📊 Suivi et évaluation de projets</div>
+          <div class="mission-item" data-i18n="vol_m5">🤝 Mobilisation de ressources et partenariats</div>
+        </div>
+      </div>
+      <div class="volunteer-form-container">
+        <form class="volunteer-form" id="volunteerForm" onsubmit="submitVolunteer(event)">
+          <h3 data-i18n="vol_form_title">Candidature bénévole</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="volFirstName" data-i18n="vol_lbl_fname">Prénom *</label>
+              <input type="text" id="volFirstName" required data-i18n-placeholder="vol_ph_fname" placeholder="Prénom" />
+            </div>
+            <div class="form-group">
+              <label for="volLastName" data-i18n="vol_lbl_lname">Nom *</label>
+              <input type="text" id="volLastName" required data-i18n-placeholder="vol_ph_lname" placeholder="Nom" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="volEmail" data-i18n="vol_lbl_email">E-mail *</label>
+            <input type="email" id="volEmail" required data-i18n-placeholder="vol_ph_email" placeholder="votre@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="volDomain" data-i18n="vol_lbl_domain">Domaine de compétence *</label>
+            <select id="volDomain" required>
+              <option value="" data-i18n="vol_opt_choose">Choisir un domaine</option>
+              <option value="education" data-i18n="vol_opt_edu">Éducation / Enseignement</option>
+              <option value="sante" data-i18n="vol_opt_health">Santé / Médecine</option>
+              <option value="communication" data-i18n="vol_opt_comm">Communication / Digital</option>
+              <option value="juridique" data-i18n="vol_opt_law">Droit / Juridique</option>
+              <option value="finance" data-i18n="vol_opt_fin">Finance / Comptabilité</option>
+              <option value="logistique" data-i18n="vol_opt_log">Logistique / Terrain</option>
+              <option value="autre" data-i18n="vol_opt_other">Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="volMotivation" data-i18n="vol_lbl_motiv">Motivations *</label>
+            <textarea id="volMotivation" rows="3" required data-i18n-placeholder="vol_ph_motiv" placeholder="Pourquoi souhaitez-vous rejoindre OPEN MALI ?"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="volAvailability" data-i18n="vol_lbl_avail">Disponibilités</label>
+            <input type="text" id="volAvailability" data-i18n-placeholder="vol_ph_avail" placeholder="Ex: Weekends, temps partiel..." />
+          </div>
+          <div class="form-group">
+            <label for="volCV" data-i18n="vol_lbl_cv">CV (optionnel)</label>
+            <input type="file" id="volCV" accept=".pdf,.doc,.docx" class="file-input" />
+          </div>
+          <button type="submit" class="btn-volunteer" data-i18n="vol_btn_submit">🚀 Envoyer ma candidature</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJETS & RÉALISATIONS ===== -->
+<section class="projects" id="projets">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label" data-i18n="proj_label">Nos Projets</div>
+      <h2 class="section-title" data-i18n="proj_title">Des réalisations concrètes sur le terrain</h2>
+      <p class="section-subtitle" data-i18n="proj_subtitle">Chaque projet est une transformation réelle dans la vie de milliers de Maliens.</p>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card featured">
+        <div class="project-badge" data-i18n="proj_flagship">Programme phare</div>
+        <div class="project-icon">🎓</div>
+        <h3 data-i18n="proj_1_title">Parrainage Scolaire</h3>
+        <p data-i18n="proj_1_desc">Programme de parrainage d'enfants vulnérables à 25 000 FCFA/enfant/an. Il couvre plusieurs régions du Mali avec un suivi individualisé de chaque enfant.</p>
+        <div class="project-meta">
+          <span data-i18n="proj_1_meta1">📍 National</span>
+          <span data-i18n="proj_1_meta2">👶 3 500+ enfants</span>
+        </div>
+        <div class="project-progress">
+          <div class="progress-label" data-i18n="proj_1_prog_lbl">Impact</div>
+          <div class="progress-bar"><div class="progress-fill" style="width:85%"></div></div>
+          <span>85%</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">🌍</div>
+        <h3 data-i18n="proj_2_title">Children Of the World (COW)</h3>
+        <p data-i18n="proj_2_desc">Programme d'envergure internationale bénéficiant à des milliers d'enfants maliens, en partenariat avec des organisations mondiales.</p>
+        <div class="project-meta">
+          <span data-i18n="proj_2_meta1">📍 Plusieurs régions</span>
+          <span data-i18n="proj_2_meta2">👨‍👩‍👧‍👦 18 778 bénéficiaires</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">👩‍💼</div>
+        <h3 data-i18n="proj_3_title">PAFFIPE</h3>
+        <p data-i18n="proj_3_desc">Programme d'autonomisation financière et de formation professionnelle pour les femmes et jeunes filles dans les zones rurales.</p>
+        <div class="project-meta">
+          <span data-i18n="proj_3_meta1">📍 Zones rurales</span>
+          <span data-i18n="proj_3_meta2">♀️ Femmes & jeunes</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">🌱</div>
+        <h3 data-i18n="proj_4_title">DAMBE</h3>
+        <p data-i18n="proj_4_desc">Initiative de renforcement des capacités et de développement communautaire au service des populations les plus vulnérables.</p>
+        <div class="project-meta">
+          <span data-i18n="proj_4_meta1">📍 Communautés locales</span>
+          <span data-i18n="proj_4_meta2">🏘️ Développement</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">💧</div>
+        <h3 data-i18n="proj_5_title">SARE</h3>
+        <p data-i18n="proj_5_desc">Projet d'accès à l'eau, à l'assainissement et aux ressources essentielles pour les communautés rurales défavorisées.</p>
+        <div class="project-meta">
+          <span data-i18n="proj_5_meta1">📍 Rural</span>
+          <span data-i18n="proj_5_meta2">🚰 Eau & Santé</span>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon">🦟</div>
+        <h3 data-i18n="proj_6_title">Lutte Anti-Paludisme</h3>
+        <p data-i18n="proj_6_desc">Distribution de moustiquaires imprégnées, sensibilisation et traitement préventif pour réduire la mortalité infantile due au paludisme.</p>
+        <div class="project-meta">
+          <span data-i18n="proj_6_meta1">📍 Zones endémiques</span>
+          <span data-i18n="proj_6_meta2">🏥 Santé publique</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRANSPARENCE ===== -->
+<section class="transparency" id="transparence">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label" data-i18n="transp_label">Transparence</div>
+      <h2 class="section-title" data-i18n="transp_title">Une ONG ouverte et responsable</h2>
+      <p class="section-subtitle" data-i18n="transp_subtitle">Nous croyons en la transparence totale vis-à-vis de nos donateurs, partenaires et bénéficiaires.</p>
+    </div>
+    <div class="transparency-grid">
+      <div class="doc-category">
+        <div class="doc-cat-icon">📊</div>
+        <h3 data-i18n="transp_annual_title">Rapports annuels</h3>
+        <div class="doc-list">
+          <div class="doc-item">
+            <div class="doc-icon">📄</div>
+            <div class="doc-info">
+              <strong data-i18n="transp_doc_2025_title">Rapport annuel 2025</strong>
+              <span data-i18n="transp_doc_2025_desc">Activités, résultats et perspectives</span>
+            </div>
+            <button class="doc-download" onclick="downloadDoc('rapport-2025')">⬇️</button>
+          </div>
+          <div class="doc-item">
+            <div class="doc-icon">📄</div>
+            <div class="doc-info">
+              <strong data-i18n="transp_doc_2024_title">Rapport annuel 2024</strong>
+              <span data-i18n="transp_doc_2024_desc">Bilan des activités</span>
+            </div>
+            <button class="doc-download" onclick="downloadDoc('rapport-2024')">⬇️</button>
+          </div>
+        </div>
+      </div>
+      <div class="doc-category">
+        <div class="doc-cat-icon">💰</div>
+        <h3 data-i18n="transp_fin_title">Rapports financiers</h3>
+        <div class="doc-list">
+          <div class="doc-item">
+            <div class="doc-icon">📄</div>
+            <div class="doc-info">
+              <strong data-i18n="transp_fin_2025_title">Budget 2025 – Exécution</strong>
+              <span data-i18n="transp_fin_2025_desc">Rapport financier certifié</span>
+            </div>
+            <button class="doc-download" onclick="downloadDoc('budget-2025')">⬇️</button>
+          </div>
+          <div class="doc-item">
+            <div class="doc-icon">📄</div>
+            <div class="doc-info">
+              <strong data-i18n="transp_fin_2024_title">Audit externe 2024</strong>
+              <span data-i18n="transp_fin_2024_desc">Rapport d'audit indépendant</span>
+            </div>
+            <button class="doc-download" onclick="downloadDoc('audit-2024')">⬇️</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-category">
+        <div class="doc-cat-icon">🤝</div>
+        <h3 data-i18n="transp_gov_title">Gouvernance</h3>
+        <div class="governance-info">
+          <div class="gov-item">
+            <div class="gov-role" data-i18n="transp_gov_pres">Président</div>
+            <div class="gov-name" data-i18n="transp_gov_board">Bureau Exécutif OPEN MALI</div>
+          </div>
+          <div class="gov-item">
+            <div class="gov-role" data-i18n="transp_gov_sec">Secrétaire Général</div>
+            <div class="gov-name" data-i18n="transp_gov_board">Bureau Exécutif OPEN MALI</div>
+          </div>
+          <div class="gov-item">
+            <div class="gov-role" data-i18n="transp_gov_tres">Trésorier</div>
+            <div class="gov-name" data-i18n="transp_gov_board">Bureau Exécutif OPEN MALI</div>
+          </div>
+          <p class="gov-note" data-i18n="transp_gov_note">* Organigramme complet disponible sur demande</p>
+        </div>
+      </div>
+    </div>
+    <div class="partners-section">
+      <h3 data-i18n="transp_part_title">Nos Partenaires & Bailleurs</h3>
+      <div class="partners-grid">
+        <div class="partner-badge" data-i18n="transp_part_un">🌐 Nations Unies (ECOSOC)</div>
+        <div class="partner-badge" data-i18n="transp_part_diakonia">🇸🇪 Diakonia</div>
+        <div class="partner-badge" data-i18n="transp_part_fcil">🇨🇦 FCIL Canada</div>
+        <div class="partner-badge" data-i18n="transp_part_gov">🇲🇱 Ministère de l'Action Humanitaire</div>
+        <div class="partner-badge" data-i18n="transp_part_local">🤝 Partenaires locaux</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TÉMOIGNAGES ===== -->
+<section class="testimonials" id="temoignages">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label" data-i18n="testim_label">Témoignages</div>
+      <h2 class="section-title" data-i18n="testim_title">Ils témoignent de l'impact d'OPEN MALI</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-quote">❝</div>
+        <p data-i18n="testim_1_quote">« Grâce au parrainage d'OPEN MALI, j'ai pu terminer mon école primaire et maintenant je suis au lycée. Je veux devenir médecin pour soigner ma communauté. »</p>
+        <div class="testimonial-author">
+          <div class="author-avatar education-avatar">🎓</div>
+          <div>
+            <strong data-i18n="testim_1_author">Aminata, 15 ans</strong>
+            <span data-i18n="testim_1_role">Filleule du programme de parrainage, Ségou</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card featured">
+        <div class="testimonial-quote">❝</div>
+        <p data-i18n="testim_2_quote">« OPEN MALI nous a donné bien plus que de l'aide matérielle. Ils nous ont donné confiance en nous et les outils pour être autonomes. Notre coopérative emploie maintenant 25 femmes. »</p>
+        <div class="testimonial-author">
+          <div class="author-avatar femmes-avatar">💪</div>
+          <div>
+            <strong data-i18n="testim_2_author">Fatoumata Coulibaly</strong>
+            <span data-i18n="testim_2_role">Bénéficiaire du programme PAFFIPE, Sikasso</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-quote">❝</div>
+        <p data-i18n="testim_3_quote">« Je parraine un enfant depuis 3 ans, depuis le Canada. Les rapports réguliers d'OPEN MALI me permettent de suivre ses progrès. Une expérience humaine extraordinaire. »</p>
+        <div class="testimonial-author">
+          <div class="author-avatar parrain-avatar">🌟</div>
+          <div>
+            <strong data-i18n="testim_3_author">Mohamed Traoré</strong>
+            <span data-i18n="testim_3_role">Parrain, membre de la diaspora malienne à Montréal</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label" data-i18n="contact_label">Contact</div>
+      <h2 class="section-title" data-i18n="contact_title">Contactez OPEN MALI</h2>
+      <p class="section-subtitle" data-i18n="contact_subtitle">Une question, un partenariat, un projet ? Notre équipe vous répond dans les plus brefs délais.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-detail">
+          <div class="contact-icon">📍</div>
+          <div>
+            <strong data-i18n="contact_hq_title">Siège social</strong>
+            <p data-i18n="contact_hq_desc">Bamako, République du Mali</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">📞</div>
+          <div>
+            <strong data-i18n="contact_phone_title">Téléphone</strong>
+            <p><a href="tel:+22377121314" style="color:inherit;text-decoration:none;">+223 77 12 13 14</a></p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <strong data-i18n="contact_email_title">E-mail</strong>
+            <p>contact@openmali.org</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">🌐</div>
+          <div>
+            <strong data-i18n="contact_web_title">Site web</strong>
+            <p>www.openmali.org</p>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-btn facebook">f</a>
+          <a href="#" class="social-btn twitter">𝕏</a>
+          <a href="#" class="social-btn whatsapp">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps?q=12.629380,-7.945960&z=15&output=embed"
+            width="100%"
+            height="220"
+            style="border:0; display:block;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Localisation OPEN MALI – Bamako, Mali"
+          ></iframe>
+          <a
+            href="https://maps.google.com/?q=12.629380,-7.945960"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="map-open-link"
+            data-i18n="contact_maps_link"
+          >
+            📍 Voir sur Google Maps
+          </a>
+        </div>
+      </div>
+      <div class="contact-form-container">
+        <form class="contact-form" id="contactForm" onsubmit="submitContact(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contactFirstName" data-i18n="contact_lbl_fname">Prénom *</label>
+              <input type="text" id="contactFirstName" required data-i18n-placeholder="contact_ph_fname" placeholder="Votre prénom" />
+            </div>
+            <div class="form-group">
+              <label for="contactLastName" data-i18n="contact_lbl_lname">Nom *</label>
+              <input type="text" id="contactLastName" required data-i18n-placeholder="contact_ph_lname" placeholder="Votre nom" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contactEmail" data-i18n="contact_lbl_email">E-mail *</label>
+            <input type="email" id="contactEmail" required data-i18n-placeholder="contact_ph_email" placeholder="votre@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="contactSubject" data-i18n="contact_lbl_subject">Motif du contact *</label>
+            <select id="contactSubject" required>
+              <option value="" data-i18n="contact_opt_choose">Choisir un motif</option>
+              <option value="partenariat" data-i18n="contact_opt_part">Partenariat</option>
+              <option value="don" data-i18n="contact_opt_don">Don / Financement</option>
+              <option value="presse" data-i18n="contact_opt_press">Presse / Média</option>
+              <option value="benevolat" data-i18n="contact_opt_vol">Bénévolat</option>
+              <option value="parrainage" data-i18n="contact_opt_spons">Parrainage</option>
+              <option value="autre" data-i18n="contact_opt_other">Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="contactMessage" data-i18n="contact_lbl_msg">Message *</label>
+            <textarea id="contactMessage" rows="5" required data-i18n-placeholder="contact_ph_msg" placeholder="Votre message..."></textarea>
+          </div>
+          <div class="form-group captcha-group">
+            <input type="checkbox" id="captchaCheck" />
+            <label for="captchaCheck" data-i18n="contact_captcha_lbl">Je ne suis pas un robot</label>
+          </div>
+          <button type="submit" class="btn-contact" data-i18n="contact_btn_submit">📧 Envoyer le message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEWSLETTER ===== -->
+<section class="newsletter" id="newsletter">
+  <div class="container">
+    <div class="newsletter-content">
+      <div class="newsletter-icon">📬</div>
+      <div class="newsletter-text">
+        <h3 data-i18n="newslet_title">Restez informés de nos actions</h3>
+        <p data-i18n="newslet_desc">Recevez nos actualités, rapports et appels à mobilisation directement dans votre boîte mail.</p>
+      </div>
+      <form class="newsletter-form" id="newsletterForm" onsubmit="submitNewsletter(event)">
+        <input type="email" id="newsletterEmail" data-i18n-placeholder="newslet_placeholder" placeholder="Votre adresse e-mail" required />
+        <button type="submit" data-i18n="newslet_btn">S'inscrire →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="logo.png" alt="OPEN MALI" class="footer-logo-img" />
+          </div>
+          <p class="footer-tagline" data-i18n="footer_tagline">« Oui, Pour une Enfance Noble »</p>
+          <p class="footer-desc" data-i18n="footer_desc">Première ONG humanitaire de jeunes du Mali, fondée en 2002. Nous œuvrons pour l'éducation, la santé et la dignité des populations maliennes.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link">Instagram</a>
+          </div>
+        </div>
+        <div class="footer-links-group">
+          <h4 data-i18n="footer_group_org">L'organisation</h4>
+          <ul>
+            <li><a href="#qui-sommes-nous" data-i18n="footer_link_about">Qui sommes-nous</a></li>
+            <li><a href="#qui-sommes-nous" data-i18n="footer_link_history">Notre histoire</a></li>
+            <li><a href="#transparence" data-i18n="footer_link_gov">Gouvernance</a></li>
+            <li><a href="#transparence" data-i18n="footer_link_partners">Nos partenaires</a></li>
+            <li><a href="#transparence" data-i18n="footer_link_transp">Transparence</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4 data-i18n="footer_group_act">Agir</h4>
+          <ul>
+            <li><a href="#don" data-i18n="footer_link_donate">Faire un don</a></li>
+            <li><a href="#parrainage" data-i18n="footer_link_sponsor">Parrainer un enfant</a></li>
+            <li><a href="#benevolat" data-i18n="footer_link_vol">Devenir bénévole</a></li>
+            <li><a href="#benevolat" data-i18n="footer_link_join">Adhérer à l'ONG</a></li>
+            <li><a href="#contact" data-i18n="footer_link_part">Partenariat</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4 data-i18n="footer_group_prog">Nos programmes</h4>
+          <ul>
+            <li><a href="#projets" data-i18n="footer_link_p_spons">Parrainage scolaire</a></li>
+            <li><a href="#projets" data-i18n="footer_link_p_cow">Children of the World</a></li>
+            <li><a href="#projets" data-i18n="footer_link_p_paffipe">PAFFIPE</a></li>
+            <li><a href="#projets" data-i18n="footer_link_p_dambe">DAMBE</a></li>
+            <li><a href="#projets" data-i18n="footer_link_p_sare">SARE</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p data-i18n="footer_copy">© 2026 OPEN MALI – Oui, Pour une Enfance Noble. Tous droits réservés.</p>
+      <div class="footer-bottom-links">
+        <a href="#" data-i18n="footer_legal">Mentions légales</a>
+        <a href="#" data-i18n="footer_privacy">Politique de confidentialité</a>
+        <a href="#" data-i18n="footer_sitemap">Plan du site</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== MODAL DON ===== -->
+<div class="modal-overlay" id="donationModal" onclick="closeDonationModal(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeDonationModalBtn()">✕</button>
+    <div class="modal-icon">💚</div>
+    <h3 data-i18n="modal_don_title">Merci pour votre générosité !</h3>
+    <p><span data-i18n="modal_don_p1_pre">Votre don de </span><strong id="modalAmount">10 000</strong><span data-i18n="modal_don_p1_post"> FCFA va changer des vies au Mali.</span></p>
+    <p data-i18n="modal_don_p2">Un reçu vous sera envoyé par e-mail. Notre équipe vous contactera pour finaliser le paiement.</p>
+    <div class="modal-share">
+      <p data-i18n="modal_don_share">Partagez votre geste :</p>
+      <div class="share-buttons">
+        <button onclick="share('facebook')" class="share-btn fb">Facebook</button>
+        <button onclick="share('twitter')" class="share-btn tw">Twitter</button>
+        <button onclick="share('whatsapp')" class="share-btn wa">WhatsApp</button>
+      </div>
+    </div>
+    <button class="btn-modal-close" onclick="closeDonationModalBtn()" data-i18n="modal_btn_close">Fermer</button>
+  </div>
+</div>
+
+<!-- ===== MODAL SUCCÈS ===== -->
+<div class="modal-overlay" id="successModal" onclick="closeSuccessModal(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeSuccessModalBtn()">✕</button>
+    <div class="modal-icon">✅</div>
+    <h3 id="successTitle" data-i18n="modal_succ_title">Message envoyé !</h3>
+    <p id="successMessage" data-i18n="modal_succ_msg">Notre équipe vous répondra dans les plus brefs délais.</p>
+    <button class="btn-modal-close" onclick="closeSuccessModalBtn()" data-i18n="modal_btn_close">Fermer</button>
+  </div>
+</div>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Retour en haut">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
