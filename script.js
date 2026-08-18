@@ -141,6 +141,14 @@ const TRANSLATIONS = {
     "don_btn_currency": "FCFA",
     "don_security": "🔒 Paiement 100% sécurisé · Reçu par e-mail",
 
+    // S'engager & Contact (Hub fusionné)
+    "engage_label": "Agir & Nous Rejoindre",
+    "engage_title": "Offrir un Avenir, S'engager & Contacter OPEN MALI",
+    "engage_subtitle": "Parrainez un enfant, devenez bénévole ou contactez notre équipe pour construire ensemble l'avenir de la jeunesse malienne.",
+    "engage_tab_sponsor": "🎓 Parrainer un enfant",
+    "engage_tab_volunteer": "🤝 Rejoindre l'équipe",
+    "engage_tab_contact": "✉️ Contact & Coordonnées",
+
     // Child Sponsorship (Parrainage)
     "spons_label": "Parrainage d'enfants",
     "spons_title": "Offrez un avenir à un enfant",
@@ -491,6 +499,14 @@ const TRANSLATIONS = {
     "don_btn_text": "💚 I donate",
     "don_btn_currency": "FCFA",
     "don_security": "🔒 100% Secure Payment · Email Receipt",
+
+    // Get Involved & Contact (Merged Hub)
+    "engage_label": "Act & Join Us",
+    "engage_title": "Sponsor a Child, Volunteer & Contact OPEN MALI",
+    "engage_subtitle": "Sponsor a child, become a volunteer, or reach out to our team to build a brighter future for Malian youth together.",
+    "engage_tab_sponsor": "🎓 Sponsor a Child",
+    "engage_tab_volunteer": "🤝 Join the Team",
+    "engage_tab_contact": "✉️ Contact & Info",
 
     // Child Sponsorship (Parrainage)
     "spons_label": "Child Sponsorship",
@@ -1211,10 +1227,45 @@ function toggleLang() {
   applyLanguage(newLang, true);
 }
 
+// ===== ENGAGEMENT & CONTACT TABS =====
+function switchEngagementTab(tabName) {
+  const tabBtns = document.querySelectorAll('.engage-tab-btn');
+  const tabPanes = document.querySelectorAll('.engage-tab-pane');
+
+  tabBtns.forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.tab === tabName);
+  });
+  tabPanes.forEach(pane => {
+    pane.classList.toggle('active', pane.id === `tabPane-${tabName}`);
+  });
+}
+
+function handleEngagementHash() {
+  const hash = window.location.hash;
+  if (hash === '#parrainage' || hash === '#sponsor') {
+    switchEngagementTab('sponsor');
+  } else if (hash === '#benevolat' || hash === '#volunteer') {
+    switchEngagementTab('volunteer');
+  } else if (hash === '#contact' || hash === '#engagement') {
+    switchEngagementTab('contact');
+  }
+}
+
+window.addEventListener('hashchange', handleEngagementHash);
+
 // ===== SMOOTH SCROLL FOR ALL ANCHORS =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-    const target = document.querySelector(this.getAttribute('href'));
+    const href = this.getAttribute('href');
+    if (href === '#parrainage') {
+      switchEngagementTab('sponsor');
+    } else if (href === '#benevolat') {
+      switchEngagementTab('volunteer');
+    } else if (href === '#contact' || href === '#engagement') {
+      switchEngagementTab('contact');
+    }
+
+    const target = document.querySelector(href);
     if (target) {
       e.preventDefault();
       const offsetTop = target.getBoundingClientRect().top + window.scrollY - 80;
@@ -1259,9 +1310,11 @@ document.querySelectorAll('.project-card').forEach(card => {
 // ===== INITIALIZE =====
 document.addEventListener('DOMContentLoaded', () => {
   applyLanguage(currentLang, false);
+  handleEngagementHash();
 });
 // Also apply immediately
 applyLanguage(currentLang, false);
+handleEngagementHash();
 
 console.log('🇲🇱 OPEN MALI – Oui, Pour une Enfance Noble');
 console.log('Site web initialisé avec succès. Langue active :', currentLang);

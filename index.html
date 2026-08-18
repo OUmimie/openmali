@@ -420,156 +420,7 @@
   </div>
 </section>
 
-<!-- ===== PARRAINAGE ===== -->
-<section class="sponsorship" id="parrainage">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label" data-i18n="spons_label">Parrainage d'enfants</div>
-      <h2 class="section-title" data-i18n="spons_title">Offrez un avenir à un enfant</h2>
-      <p class="section-subtitle" data-i18n="spons_subtitle">Pour seulement 25 000 FCFA par an, vous permettez à un enfant vulnérable de rester à l'école et de construire son avenir.</p>
-    </div>
-    <div class="sponsorship-grid">
-      <div class="sponsorship-info">
-        <div class="how-it-works">
-          <h3 data-i18n="spons_how_title">Comment ça fonctionne ?</h3>
-          <div class="step">
-            <div class="step-num">01</div>
-            <div>
-              <strong data-i18n="spons_step1_title">Choisissez votre région</strong>
-              <p data-i18n="spons_step1_desc">Sélectionnez la zone géographique où vous souhaitez avoir un impact</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">02</div>
-            <div>
-              <strong data-i18n="spons_step2_title">Remplissez le formulaire</strong>
-              <p data-i18n="spons_step2_desc">Vos coordonnées et préférences en quelques minutes</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">03</div>
-            <div>
-              <strong data-i18n="spons_step3_title">Recevez le profil de votre filleul</strong>
-              <p data-i18n="spons_step3_desc">OPEN MALI vous met en relation avec un enfant identifié</p>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">04</div>
-            <div>
-              <strong data-i18n="spons_step4_title">Suivez son parcours</strong>
-              <p data-i18n="spons_step4_desc">Rapports réguliers sur les progrès scolaires de l'enfant parrainé</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="sponsorship-form-container">
-        <form class="sponsorship-form" id="sponsorshipForm" onsubmit="submitSponsorship(event)">
-          <h3 data-i18n="spons_form_title">Demande de parrainage</h3>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="sponsorFirstName" data-i18n="spons_lbl_fname">Prénom *</label>
-              <input type="text" id="sponsorFirstName" required data-i18n-placeholder="spons_ph_fname" placeholder="Votre prénom" />
-            </div>
-            <div class="form-group">
-              <label for="sponsorLastName" data-i18n="spons_lbl_lname">Nom *</label>
-              <input type="text" id="sponsorLastName" required data-i18n-placeholder="spons_ph_lname" placeholder="Votre nom" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="sponsorEmail" data-i18n="spons_lbl_email">E-mail *</label>
-            <input type="email" id="sponsorEmail" required data-i18n-placeholder="spons_ph_email" placeholder="votre@email.com" />
-          </div>
-          <div class="form-group">
-            <label for="sponsorPhone" data-i18n="spons_lbl_phone">Téléphone</label>
-            <input type="tel" id="sponsorPhone" data-i18n-placeholder="spons_ph_phone" placeholder="+223..." />
-          </div>
-          <div class="form-group">
-            <label for="sponsorRegion" data-i18n="spons_lbl_region">Région préférée</label>
-            <select id="sponsorRegion">
-              <option value="" data-i18n="spons_opt_all_regions">Toute région</option>
-              <option value="bamako">Bamako</option>
-              <option value="kayes">Kayes</option>
-              <option value="koulikoro">Koulikoro</option>
-              <option value="sikasso">Sikasso</option>
-              <option value="segou">Ségou</option>
-              <option value="mopti">Mopti</option>
-              <option value="tombouctou">Tombouctou</option>
-              <option value="gao">Gao</option>
-            </select>
-          </div>
-          <button type="submit" class="btn-sponsor" data-i18n="spons_btn_submit">🤝 Envoyer ma demande</button>
-          <p class="form-note" data-i18n="spons_note">Un responsable OPEN MALI vous contactera sous 48h</p>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ===== BÉNÉVOLAT ===== -->
-<section class="volunteer" id="benevolat">
-  <div class="volunteer-bg"></div>
-  <div class="container">
-    <div class="volunteer-grid">
-      <div class="volunteer-info">
-        <div class="section-label light" data-i18n="vol_label">Bénévolat & Adhésion</div>
-        <h2 class="section-title light" data-i18n="vol_title">Rejoignez l'équipe OPEN MALI</h2>
-        <p class="volunteer-desc" data-i18n="vol_desc">Votre temps et vos compétences sont précieux. Rejoignez nos équipes sur le terrain ou en ligne et contribuez à notre mission humanitaire.</p>
-        <div class="volunteer-missions">
-          <div class="mission-item" data-i18n="vol_m1">🏫 Animation éducative dans les écoles</div>
-          <div class="mission-item" data-i18n="vol_m2">🏥 Sensibilisation santé communautaire</div>
-          <div class="mission-item" data-i18n="vol_m3">💻 Appui digital et communication</div>
-          <div class="mission-item" data-i18n="vol_m4">📊 Suivi et évaluation de projets</div>
-          <div class="mission-item" data-i18n="vol_m5">🤝 Mobilisation de ressources et partenariats</div>
-        </div>
-      </div>
-      <div class="volunteer-form-container">
-        <form class="volunteer-form" id="volunteerForm" onsubmit="submitVolunteer(event)">
-          <h3 data-i18n="vol_form_title">Candidature bénévole</h3>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="volFirstName" data-i18n="vol_lbl_fname">Prénom *</label>
-              <input type="text" id="volFirstName" required data-i18n-placeholder="vol_ph_fname" placeholder="Prénom" />
-            </div>
-            <div class="form-group">
-              <label for="volLastName" data-i18n="vol_lbl_lname">Nom *</label>
-              <input type="text" id="volLastName" required data-i18n-placeholder="vol_ph_lname" placeholder="Nom" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="volEmail" data-i18n="vol_lbl_email">E-mail *</label>
-            <input type="email" id="volEmail" required data-i18n-placeholder="vol_ph_email" placeholder="votre@email.com" />
-          </div>
-          <div class="form-group">
-            <label for="volDomain" data-i18n="vol_lbl_domain">Domaine de compétence *</label>
-            <select id="volDomain" required>
-              <option value="" data-i18n="vol_opt_choose">Choisir un domaine</option>
-              <option value="education" data-i18n="vol_opt_edu">Éducation / Enseignement</option>
-              <option value="sante" data-i18n="vol_opt_health">Santé / Médecine</option>
-              <option value="communication" data-i18n="vol_opt_comm">Communication / Digital</option>
-              <option value="juridique" data-i18n="vol_opt_law">Droit / Juridique</option>
-              <option value="finance" data-i18n="vol_opt_fin">Finance / Comptabilité</option>
-              <option value="logistique" data-i18n="vol_opt_log">Logistique / Terrain</option>
-              <option value="autre" data-i18n="vol_opt_other">Autre</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="volMotivation" data-i18n="vol_lbl_motiv">Motivations *</label>
-            <textarea id="volMotivation" rows="3" required data-i18n-placeholder="vol_ph_motiv" placeholder="Pourquoi souhaitez-vous rejoindre OPEN MALI ?"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="volAvailability" data-i18n="vol_lbl_avail">Disponibilités</label>
-            <input type="text" id="volAvailability" data-i18n-placeholder="vol_ph_avail" placeholder="Ex: Weekends, temps partiel..." />
-          </div>
-          <div class="form-group">
-            <label for="volCV" data-i18n="vol_lbl_cv">CV (optionnel)</label>
-            <input type="file" id="volCV" accept=".pdf,.doc,.docx" class="file-input" />
-          </div>
-          <button type="submit" class="btn-volunteer" data-i18n="vol_btn_submit">🚀 Envoyer ma candidature</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ===== PROJETS & RÉALISATIONS ===== -->
 <section class="projects" id="projets">
@@ -776,112 +627,283 @@
   </div>
 </section>
 
-<!-- ===== CONTACT ===== -->
-<section class="contact" id="contact">
+<!-- ===== S'ENGAGER & CONTACTER OPEN MALI (HUB FUSIONNÉ) ===== -->
+<section class="engagement-hub" id="contact">
+  <div id="parrainage" class="anchor-target"></div>
+  <div id="benevolat" class="anchor-target"></div>
+  <div id="engagement" class="anchor-target"></div>
+
   <div class="container">
     <div class="section-header">
-      <div class="section-label" data-i18n="contact_label">Contact</div>
-      <h2 class="section-title" data-i18n="contact_title">Contactez OPEN MALI</h2>
-      <p class="section-subtitle" data-i18n="contact_subtitle">Une question, un partenariat, un projet ? Notre équipe vous répond dans les plus brefs délais.</p>
+      <div class="section-label" data-i18n="engage_label">Agir & Nous Rejoindre</div>
+      <h2 class="section-title" data-i18n="engage_title">Offrir un Avenir, S'engager & Contacter OPEN MALI</h2>
+      <p class="section-subtitle" data-i18n="engage_subtitle">Parrainez un enfant, devenez bénévole ou contactez notre équipe pour construire ensemble l'avenir de la jeunesse malienne.</p>
     </div>
-    <div class="contact-grid">
-      <div class="contact-info">
-        <div class="contact-detail">
-          <div class="contact-icon">📍</div>
-          <div>
-            <strong data-i18n="contact_hq_title">Siège social</strong>
-            <p data-i18n="contact_hq_desc">Bamako, République du Mali</p>
-          </div>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-icon">📞</div>
-          <div>
-            <strong data-i18n="contact_phone_title">Téléphone</strong>
-            <p><a href="tel:+22377121314" style="color:inherit;text-decoration:none;">+223 77 12 13 14</a></p>
-          </div>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-icon">✉️</div>
-          <div>
-            <strong data-i18n="contact_email_title">E-mail</strong>
-            <p>contact@openmali.org</p>
-          </div>
-        </div>
-        <div class="contact-detail">
-          <div class="contact-icon">🌐</div>
-          <div>
-            <strong data-i18n="contact_web_title">Site web</strong>
-            <p>www.openmali.org</p>
-          </div>
-        </div>
-        <div class="social-links">
-          <a href="#" class="social-btn facebook">f</a>
-          <a href="#" class="social-btn twitter">𝕏</a>
-          <a href="#" class="social-btn whatsapp">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          </a>
-        </div>
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps?q=12.629380,-7.945960&z=15&output=embed"
-            width="100%"
-            height="220"
-            style="border:0; display:block;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Localisation OPEN MALI – Bamako, Mali"
-          ></iframe>
-          <a
-            href="https://maps.google.com/?q=12.629380,-7.945960"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="map-open-link"
-            data-i18n="contact_maps_link"
-          >
-            📍 Voir sur Google Maps
-          </a>
-        </div>
-      </div>
-      <div class="contact-form-container">
-        <form class="contact-form" id="contactForm" onsubmit="submitContact(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="contactFirstName" data-i18n="contact_lbl_fname">Prénom *</label>
-              <input type="text" id="contactFirstName" required data-i18n-placeholder="contact_ph_fname" placeholder="Votre prénom" />
+
+    <!-- Sélecteur d'onglets fusionné -->
+    <div class="engage-tabs-container">
+      <button type="button" class="engage-tab-btn active" data-tab="sponsor" onclick="switchEngagementTab('sponsor')">
+        <span data-i18n="engage_tab_sponsor">🎓 Parrainer un enfant</span>
+      </button>
+      <button type="button" class="engage-tab-btn" data-tab="volunteer" onclick="switchEngagementTab('volunteer')">
+        <span data-i18n="engage_tab_volunteer">🤝 Rejoindre l'équipe</span>
+      </button>
+      <button type="button" class="engage-tab-btn" data-tab="contact" onclick="switchEngagementTab('contact')">
+        <span data-i18n="engage_tab_contact">✉️ Contact & Coordonnées</span>
+      </button>
+    </div>
+
+    <!-- Contenu des onglets -->
+    <div class="engage-tabs-content">
+      
+      <!-- ONGLET 1 : PARRAINAGE D'ENFANTS -->
+      <div class="engage-tab-pane active" id="tabPane-sponsor">
+        <div class="sponsorship-grid">
+          <div class="sponsorship-info">
+            <div class="how-it-works">
+              <h3 data-i18n="spons_how_title">Comment ça fonctionne ?</h3>
+              <div class="step">
+                <div class="step-num">01</div>
+                <div>
+                  <strong data-i18n="spons_step1_title">Choisissez votre région</strong>
+                  <p data-i18n="spons_step1_desc">Sélectionnez la zone géographique où vous souhaitez avoir un impact</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num">02</div>
+                <div>
+                  <strong data-i18n="spons_step2_title">Remplissez le formulaire</strong>
+                  <p data-i18n="spons_step2_desc">Vos coordonnées et préférences en quelques minutes</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num">03</div>
+                <div>
+                  <strong data-i18n="spons_step3_title">Recevez le profil de votre filleul</strong>
+                  <p data-i18n="spons_step3_desc">OPEN MALI vous met en relation avec un enfant identifié</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num">04</div>
+                <div>
+                  <strong data-i18n="spons_step4_title">Suivez son parcours</strong>
+                  <p data-i18n="spons_step4_desc">Rapports réguliers sur les progrès scolaires de l'enfant parrainé</p>
+                </div>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="contactLastName" data-i18n="contact_lbl_lname">Nom *</label>
-              <input type="text" id="contactLastName" required data-i18n-placeholder="contact_ph_lname" placeholder="Votre nom" />
+            <div class="hub-mini-card">
+              <span>🎓</span>
+              <p><strong>25 000 FCFA / an</strong> permettent de financer les fournitures, l'uniforme et les frais scolaires d'un enfant vulnérable.</p>
             </div>
           </div>
-          <div class="form-group">
-            <label for="contactEmail" data-i18n="contact_lbl_email">E-mail *</label>
-            <input type="email" id="contactEmail" required data-i18n-placeholder="contact_ph_email" placeholder="votre@email.com" />
+          <div class="sponsorship-form-container">
+            <form class="sponsorship-form" id="sponsorshipForm" onsubmit="submitSponsorship(event)">
+              <h3 data-i18n="spons_form_title">Demande de parrainage</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="sponsorFirstName" data-i18n="spons_lbl_fname">Prénom *</label>
+                  <input type="text" id="sponsorFirstName" required data-i18n-placeholder="spons_ph_fname" placeholder="Votre prénom" />
+                </div>
+                <div class="form-group">
+                  <label for="sponsorLastName" data-i18n="spons_lbl_lname">Nom *</label>
+                  <input type="text" id="sponsorLastName" required data-i18n-placeholder="spons_ph_lname" placeholder="Votre nom" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="sponsorEmail" data-i18n="spons_lbl_email">E-mail *</label>
+                <input type="email" id="sponsorEmail" required data-i18n-placeholder="spons_ph_email" placeholder="votre@email.com" />
+              </div>
+              <div class="form-group">
+                <label for="sponsorPhone" data-i18n="spons_lbl_phone">Téléphone</label>
+                <input type="tel" id="sponsorPhone" data-i18n-placeholder="spons_ph_phone" placeholder="+223..." />
+              </div>
+              <div class="form-group">
+                <label for="sponsorRegion" data-i18n="spons_lbl_region">Région préférée</label>
+                <select id="sponsorRegion">
+                  <option value="" data-i18n="spons_opt_all_regions">Toute région</option>
+                  <option value="bamako">Bamako</option>
+                  <option value="kayes">Kayes</option>
+                  <option value="koulikoro">Koulikoro</option>
+                  <option value="sikasso">Sikasso</option>
+                  <option value="segou">Ségou</option>
+                  <option value="mopti">Mopti</option>
+                  <option value="tombouctou">Tombouctou</option>
+                  <option value="gao">Gao</option>
+                </select>
+              </div>
+              <button type="submit" class="btn-sponsor" data-i18n="spons_btn_submit">🤝 Envoyer ma demande</button>
+              <p class="form-note" data-i18n="spons_note">Un responsable OPEN MALI vous contactera sous 48h</p>
+            </form>
           </div>
-          <div class="form-group">
-            <label for="contactSubject" data-i18n="contact_lbl_subject">Motif du contact *</label>
-            <select id="contactSubject" required>
-              <option value="" data-i18n="contact_opt_choose">Choisir un motif</option>
-              <option value="partenariat" data-i18n="contact_opt_part">Partenariat</option>
-              <option value="don" data-i18n="contact_opt_don">Don / Financement</option>
-              <option value="presse" data-i18n="contact_opt_press">Presse / Média</option>
-              <option value="benevolat" data-i18n="contact_opt_vol">Bénévolat</option>
-              <option value="parrainage" data-i18n="contact_opt_spons">Parrainage</option>
-              <option value="autre" data-i18n="contact_opt_other">Autre</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="contactMessage" data-i18n="contact_lbl_msg">Message *</label>
-            <textarea id="contactMessage" rows="5" required data-i18n-placeholder="contact_ph_msg" placeholder="Votre message..."></textarea>
-          </div>
-          <div class="form-group captcha-group">
-            <input type="checkbox" id="captchaCheck" />
-            <label for="captchaCheck" data-i18n="contact_captcha_lbl">Je ne suis pas un robot</label>
-          </div>
-          <button type="submit" class="btn-contact" data-i18n="contact_btn_submit">📧 Envoyer le message</button>
-        </form>
+        </div>
       </div>
+
+      <!-- ONGLET 2 : BÉNÉVOLAT & ADHÉSION -->
+      <div class="engage-tab-pane" id="tabPane-volunteer">
+        <div class="volunteer-grid">
+          <div class="volunteer-hub-info">
+            <div class="section-label light" data-i18n="vol_label">Bénévolat & Adhésion</div>
+            <h3 class="section-title light" data-i18n="vol_title">Rejoignez l'équipe OPEN MALI</h3>
+            <p class="volunteer-desc" data-i18n="vol_desc">Votre temps et vos compétences sont précieux. Rejoignez nos équipes sur le terrain ou en ligne et contribuez à notre mission humanitaire.</p>
+            <div class="volunteer-missions">
+              <div class="mission-item" data-i18n="vol_m1">🏫 Animation éducative dans les écoles</div>
+              <div class="mission-item" data-i18n="vol_m2">🏥 Sensibilisation santé communautaire</div>
+              <div class="mission-item" data-i18n="vol_m3">💻 Appui digital et communication</div>
+              <div class="mission-item" data-i18n="vol_m4">📊 Suivi et évaluation de projets</div>
+              <div class="mission-item" data-i18n="vol_m5">🤝 Mobilisation de ressources et partenariats</div>
+            </div>
+          </div>
+          <div class="volunteer-form-container">
+            <form class="volunteer-form" id="volunteerForm" onsubmit="submitVolunteer(event)">
+              <h3 data-i18n="vol_form_title">Candidature bénévole</h3>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="volFirstName" data-i18n="vol_lbl_fname">Prénom *</label>
+                  <input type="text" id="volFirstName" required data-i18n-placeholder="vol_ph_fname" placeholder="Prénom" />
+                </div>
+                <div class="form-group">
+                  <label for="volLastName" data-i18n="vol_lbl_lname">Nom *</label>
+                  <input type="text" id="volLastName" required data-i18n-placeholder="vol_ph_lname" placeholder="Nom" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="volEmail" data-i18n="vol_lbl_email">E-mail *</label>
+                <input type="email" id="volEmail" required data-i18n-placeholder="vol_ph_email" placeholder="votre@email.com" />
+              </div>
+              <div class="form-group">
+                <label for="volDomain" data-i18n="vol_lbl_domain">Domaine de compétence *</label>
+                <select id="volDomain" required>
+                  <option value="" data-i18n="vol_opt_choose">Choisir un domaine</option>
+                  <option value="education" data-i18n="vol_opt_edu">Éducation / Enseignement</option>
+                  <option value="sante" data-i18n="vol_opt_health">Santé / Médecine</option>
+                  <option value="communication" data-i18n="vol_opt_comm">Communication / Digital</option>
+                  <option value="juridique" data-i18n="vol_opt_law">Droit / Juridique</option>
+                  <option value="finance" data-i18n="vol_opt_fin">Finance / Comptabilité</option>
+                  <option value="logistique" data-i18n="vol_opt_log">Logistique / Terrain</option>
+                  <option value="autre" data-i18n="vol_opt_other">Autre</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="volMotivation" data-i18n="vol_lbl_motiv">Motivations *</label>
+                <textarea id="volMotivation" rows="3" required data-i18n-placeholder="vol_ph_motiv" placeholder="Pourquoi souhaitez-vous rejoindre OPEN MALI ?"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="volAvailability" data-i18n="vol_lbl_avail">Disponibilités</label>
+                <input type="text" id="volAvailability" data-i18n-placeholder="vol_ph_avail" placeholder="Ex: Weekends, temps partiel..." />
+              </div>
+              <div class="form-group">
+                <label for="volCV" data-i18n="vol_lbl_cv">CV (optionnel)</label>
+                <input type="file" id="volCV" accept=".pdf,.doc,.docx" class="file-input" />
+              </div>
+              <button type="submit" class="btn-volunteer" data-i18n="vol_btn_submit">🚀 Envoyer ma candidature</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- ONGLET 3 : CONTACT & COORDONNÉES -->
+      <div class="engage-tab-pane" id="tabPane-contact">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-detail">
+              <div class="contact-icon">📍</div>
+              <div>
+                <strong data-i18n="contact_hq_title">Siège social</strong>
+                <p data-i18n="contact_hq_desc">Bamako, République du Mali</p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-icon">📞</div>
+              <div>
+                <strong data-i18n="contact_phone_title">Téléphone</strong>
+                <p><a href="tel:+22377121314" style="color:inherit;text-decoration:none;">+223 77 12 13 14</a></p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <strong data-i18n="contact_email_title">E-mail</strong>
+                <p>contact@openmali.org</p>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-icon">🌐</div>
+              <div>
+                <strong data-i18n="contact_web_title">Site web</strong>
+                <p>www.openmali.org</p>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="#" class="social-btn facebook" aria-label="Facebook">f</a>
+              <a href="#" class="social-btn twitter" aria-label="Twitter">𝕏</a>
+              <a href="https://wa.me/22377121314" target="_blank" rel="noopener noreferrer" class="social-btn whatsapp" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </a>
+            </div>
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps?q=12.629380,-7.945960&z=15&output=embed"
+                width="100%"
+                height="220"
+                style="border:0; display:block;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Localisation OPEN MALI – Bamako, Mali"
+              ></iframe>
+              <a
+                href="https://maps.google.com/?q=12.629380,-7.945960"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="map-open-link"
+                data-i18n="contact_maps_link"
+              >
+                📍 Voir sur Google Maps
+              </a>
+            </div>
+          </div>
+          <div class="contact-form-container">
+            <form class="contact-form" id="contactForm" onsubmit="submitContact(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contactFirstName" data-i18n="contact_lbl_fname">Prénom *</label>
+                  <input type="text" id="contactFirstName" required data-i18n-placeholder="contact_ph_fname" placeholder="Votre prénom" />
+                </div>
+                <div class="form-group">
+                  <label for="contactLastName" data-i18n="contact_lbl_lname">Nom *</label>
+                  <input type="text" id="contactLastName" required data-i18n-placeholder="contact_ph_lname" placeholder="Votre nom" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contactEmail" data-i18n="contact_lbl_email">E-mail *</label>
+                <input type="email" id="contactEmail" required data-i18n-placeholder="contact_ph_email" placeholder="votre@email.com" />
+              </div>
+              <div class="form-group">
+                <label for="contactSubject" data-i18n="contact_lbl_subject">Motif du contact *</label>
+                <select id="contactSubject" required>
+                  <option value="" data-i18n="contact_opt_choose">Choisir un motif</option>
+                  <option value="partenariat" data-i18n="contact_opt_part">Partenariat</option>
+                  <option value="don" data-i18n="contact_opt_don">Don / Financement</option>
+                  <option value="presse" data-i18n="contact_opt_press">Presse / Média</option>
+                  <option value="benevolat" data-i18n="contact_opt_vol">Bénévolat</option>
+                  <option value="parrainage" data-i18n="contact_opt_spons">Parrainage</option>
+                  <option value="autre" data-i18n="contact_opt_other">Autre</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="contactMessage" data-i18n="contact_lbl_msg">Message *</label>
+                <textarea id="contactMessage" rows="5" required data-i18n-placeholder="contact_ph_msg" placeholder="Votre message..."></textarea>
+              </div>
+              <div class="form-group captcha-group">
+                <input type="checkbox" id="captchaCheck" />
+                <label for="captchaCheck" data-i18n="contact_captcha_lbl">Je ne suis pas un robot</label>
+              </div>
+              <button type="submit" class="btn-contact" data-i18n="contact_btn_submit">📧 Envoyer le message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
