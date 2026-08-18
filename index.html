@@ -368,8 +368,15 @@
         <div class="payment-methods">
           <h4 data-i18n="don_payment_title">Modes de paiement disponibles</h4>
           <div class="payment-icons">
-            <div class="payment-badge orange" data-i18n="don_pay_orange">📱 Orange Money</div>
-            <div class="payment-badge green" data-i18n="don_pay_card">💳 Carte Bancaire</div>
+            <div class="payment-badge orange" onclick="processDonation()" style="cursor:pointer;" title="Cliquez pour afficher les informations de paiement">
+              <span data-i18n="don_pay_orange">📱 Orange Money : +223 77 12 13 14</span>
+            </div>
+            <div class="payment-badge green" onclick="processDonation()" style="cursor:pointer;" title="Cliquez pour afficher les informations de paiement">
+              <span data-i18n="don_pay_moov">📱 Moov Money : +223 77 12 13 14</span>
+            </div>
+            <div class="payment-badge blue" onclick="processDonation()" style="cursor:pointer;" title="Cliquez pour afficher les informations de paiement">
+              <span data-i18n="don_pay_card">💳 Carte Bancaire / Virement</span>
+            </div>
           </div>
         </div>
       </div>
@@ -960,12 +967,51 @@
 
 <!-- ===== MODAL DON ===== -->
 <div class="modal-overlay" id="donationModal" onclick="closeDonationModal(event)">
-  <div class="modal">
-    <button class="modal-close" onclick="closeDonationModalBtn()">✕</button>
+  <div class="modal modal-donation">
+    <button class="modal-close" onclick="closeDonationModalBtn()" aria-label="Fermer">✕</button>
     <div class="modal-icon">💚</div>
-    <h3 data-i18n="modal_don_title">Merci pour votre générosité !</h3>
-    <p><span data-i18n="modal_don_p1_pre">Votre don de </span><strong id="modalAmount">10 000</strong><span data-i18n="modal_don_p1_post"> FCFA va changer des vies au Mali.</span></p>
-    <p data-i18n="modal_don_p2">Un reçu vous sera envoyé par e-mail. Notre équipe vous contactera pour finaliser le paiement.</p>
+    <h3 data-i18n="modal_don_title">Finaliser votre don</h3>
+    <p class="modal-donation-lead">
+      <span data-i18n="modal_don_p1_pre">Votre don de </span>
+      <strong id="modalAmount" class="modal-highlight-amount">10 000</strong>
+      <span data-i18n="modal_don_p1_post"> FCFA va changer des vies au Mali.</span>
+    </p>
+
+    <!-- Carte du Numéro Officiel de Don -->
+    <div class="donation-payment-box">
+      <div class="payment-box-header">
+        <span class="payment-badge-pill">📱 Orange Money · Moov Money · Wave</span>
+      </div>
+      <div class="donation-number-wrap">
+        <span class="donation-number-label" data-i18n="modal_don_num_title">Numéro officiel de don & transfert :</span>
+        <div class="donation-phone-highlight">
+          <span class="phone-digits" id="openMaliDonationPhone">+223 77 12 13 14</span>
+        </div>
+        <p class="payment-holder-label" data-i18n="modal_don_num_holder">Bénéficiaire : <strong>OPEN MALI (ONG)</strong></p>
+      </div>
+      <div class="donation-actions">
+        <button type="button" class="btn-copy-num" id="btnCopyNum" onclick="copyDonationNumber()">
+          <span id="btnCopyIcon">📋</span> <span id="btnCopyText" data-i18n="modal_don_btn_copy">Copier le numéro</span>
+        </button>
+        <a href="tel:+22377121314" class="btn-action-phone btn-call-num">
+          <span>📞</span> <span data-i18n="modal_don_btn_call">Appeler</span>
+        </a>
+        <a id="modalWaBtn" href="https://wa.me/22377121314" target="_blank" rel="noopener noreferrer" class="btn-action-phone btn-wa-num">
+          <span>💬</span> <span data-i18n="modal_don_btn_wa">WhatsApp</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Instructions étapes -->
+    <div class="donation-instructions-box">
+      <h4 data-i18n="modal_don_instructions_title">Instructions de transfert :</h4>
+      <ol class="donation-steps-list">
+        <li data-i18n="modal_don_step1">Transférez le montant au <strong>+223 77 12 13 14</strong> via <strong>Orange Money</strong> ou <strong>Moov Money</strong>.</li>
+        <li data-i18n="modal_don_step2">Mentionnez votre nom ou votre projet en motif.</li>
+        <li data-i18n="modal_don_step3">Cliquez sur WhatsApp ou contactez-nous au <strong>+223 77 12 13 14</strong> pour confirmer et recevoir votre reçu.</li>
+      </ol>
+    </div>
+
     <div class="modal-share">
       <p data-i18n="modal_don_share">Partagez votre geste :</p>
       <div class="share-buttons">

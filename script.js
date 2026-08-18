@@ -122,8 +122,9 @@ const TRANSLATIONS = {
     "don_use_2": "<strong>10 000 FCFA</strong> – Moustiquaire pour une famille",
     "don_use_3": "<strong>5 000 FCFA</strong> – Kit scolaire complet",
     "don_payment_title": "Modes de paiement disponibles",
-    "don_pay_orange": "📱 Orange Money",
-    "don_pay_card": "💳 Carte Bancaire",
+    "don_pay_orange": "📱 Orange Money : +223 77 12 13 14",
+    "don_pay_moov": "📱 Moov Money : +223 77 12 13 14",
+    "don_pay_card": "💳 Carte Bancaire / Virement",
     "don_form_title": "Choisissez votre don",
     "don_amount_label": "Montant (FCFA)",
     "don_custom_placeholder": "Autre montant...",
@@ -332,10 +333,20 @@ const TRANSLATIONS = {
     "footer_sitemap": "Plan du site",
 
     // Modals
-    "modal_don_title": "Merci pour votre générosité !",
+    "modal_don_title": "Finaliser votre don",
     "modal_don_p1_pre": "Votre don de ",
     "modal_don_p1_post": " FCFA va changer des vies au Mali.",
-    "modal_don_p2": "Un reçu vous sera envoyé par e-mail. Notre équipe vous contactera pour finaliser le paiement.",
+    "modal_don_num_title": "Numéro officiel de don & transfert :",
+    "modal_don_num_holder": "Bénéficiaire : <strong>OPEN MALI (ONG)</strong>",
+    "modal_don_btn_copy": "Copier le numéro",
+    "modal_don_btn_copied": "Copié !",
+    "modal_don_btn_call": "Appeler",
+    "modal_don_btn_wa": "WhatsApp",
+    "modal_don_instructions_title": "Instructions de transfert :",
+    "modal_don_step1": "Transférez le montant au <strong>+223 77 12 13 14</strong> via <strong>Orange Money</strong> ou <strong>Moov Money</strong>.",
+    "modal_don_step2": "Mentionnez votre nom ou votre projet en motif.",
+    "modal_don_step3": "Cliquez sur WhatsApp ou contactez-nous au <strong>+223 77 12 13 14</strong> pour confirmer et recevoir votre reçu.",
+    "modal_don_p2": "Notre équipe reste à votre disposition au +223 77 12 13 14 pour vous assister.",
     "modal_don_share": "Partagez votre geste :",
     "modal_btn_close": "Fermer",
     "modal_succ_title": "Message envoyé !",
@@ -462,8 +473,9 @@ const TRANSLATIONS = {
     "don_use_2": "<strong>10,000 FCFA</strong> – Mosquito net for a vulnerable family",
     "don_use_3": "<strong>5,000 FCFA</strong> – Complete school supply kit",
     "don_payment_title": "Available payment methods",
-    "don_pay_orange": "📱 Orange Money",
-    "don_pay_card": "💳 Credit Card",
+    "don_pay_orange": "📱 Orange Money: +223 77 12 13 14",
+    "don_pay_moov": "📱 Moov Money: +223 77 12 13 14",
+    "don_pay_card": "💳 Bank Card / Transfer",
     "don_form_title": "Choose your donation",
     "don_amount_label": "Amount (FCFA)",
     "don_custom_placeholder": "Other amount...",
@@ -672,10 +684,20 @@ const TRANSLATIONS = {
     "footer_sitemap": "Sitemap",
 
     // Modals
-    "modal_don_title": "Thank You for Your Generosity!",
+    "modal_don_title": "Complete Your Donation",
     "modal_don_p1_pre": "Your donation of ",
     "modal_don_p1_post": " FCFA will transform lives in Mali.",
-    "modal_don_p2": "A receipt will be sent to your email. Our team will contact you to complete the payment.",
+    "modal_don_num_title": "Official Donation & Transfer Number:",
+    "modal_don_num_holder": "Recipient: <strong>OPEN MALI (NGO)</strong>",
+    "modal_don_btn_copy": "Copy number",
+    "modal_don_btn_copied": "Copied!",
+    "modal_don_btn_call": "Call",
+    "modal_don_btn_wa": "WhatsApp",
+    "modal_don_instructions_title": "Transfer Instructions:",
+    "modal_don_step1": "Transfer the amount to <strong>+223 77 12 13 14</strong> via <strong>Orange Money</strong> or <strong>Moov Money</strong>.",
+    "modal_don_step2": "Specify your name or project in the transfer note.",
+    "modal_don_step3": "Click WhatsApp or contact us at <strong>+223 77 12 13 14</strong> to confirm and receive your receipt.",
+    "modal_don_p2": "Our team remains available at +223 77 12 13 14 to assist you.",
     "modal_don_share": "Share your gesture:",
     "modal_btn_close": "Close",
     "modal_succ_title": "Message Sent!",
@@ -696,6 +718,7 @@ const MESSAGES = {
     newslet_success_title: "📬 Inscription confirmée !",
     newslet_success_msg: (email) => `L'adresse ${email} a été ajoutée à notre liste de diffusion. Bienvenue dans la famille OPEN MALI !`,
     download_toast: (doc) => `📥 Téléchargement de "${doc}" en cours...`,
+    copied_toast: "📋 Numéro (+223 77 12 13 14) copié dans le presse-papiers !",
     share_text: "Je viens de soutenir OPEN MALI, ONG humanitaire au Mali ! Rejoignez-nous 💛",
     lang_switched: "🌐 Version française activée"
   },
@@ -710,6 +733,7 @@ const MESSAGES = {
     newslet_success_title: "📬 Subscription Confirmed!",
     newslet_success_msg: (email) => `The address ${email} has been added to our mailing list. Welcome to the OPEN MALI family!`,
     download_toast: (doc) => `📥 Downloading "${doc}"...`,
+    copied_toast: "📋 Number (+223 77 12 13 14) copied to clipboard!",
     share_text: "I just supported OPEN MALI, a youth humanitarian NGO in Mali! Join us 💛",
     lang_switched: "🌐 Switched to English"
   }
@@ -889,6 +913,15 @@ if (customAmountInput) {
   });
 }
 
+function getProjectLabel(projectKey) {
+  const select = document.getElementById('donProject');
+  if (select) {
+    const opt = select.querySelector(`option[value="${projectKey}"]`);
+    if (opt) return opt.textContent.trim();
+  }
+  return projectKey;
+}
+
 function processDonation() {
   const projectEl = document.getElementById('donProject');
   const project = projectEl ? projectEl.value : 'general';
@@ -896,16 +929,85 @@ function processDonation() {
 }
 
 function showDonationModal(amount, project, freq) {
+  const amt = amount || selectedAmount || 10000;
   const locale = currentLang === 'en' ? 'en-US' : 'fr-FR';
   const modalAmount = document.getElementById('modalAmount');
   if (modalAmount) {
-    modalAmount.textContent = amount.toLocaleString(locale);
+    modalAmount.textContent = amt.toLocaleString(locale);
   }
+
+  // Pre-fill WhatsApp message dynamically with donor's chosen amount & project
+  const modalWaBtn = document.getElementById('modalWaBtn');
+  if (modalWaBtn) {
+    const formattedAmt = amt.toLocaleString(locale);
+    const projectName = getProjectLabel(project || (document.getElementById('donProject')?.value || 'general'));
+    const waText = currentLang === 'en'
+      ? `Hello OPEN MALI, I would like to make a donation of ${formattedAmt} FCFA for "${projectName}".`
+      : `Bonjour OPEN MALI, je souhaite effectuer un don de ${formattedAmt} FCFA pour le projet "${projectName}".`;
+    modalWaBtn.href = `https://wa.me/22377121314?text=${encodeURIComponent(waText)}`;
+  }
+
   const donationModal = document.getElementById('donationModal');
   if (donationModal) {
     donationModal.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
+}
+
+function copyDonationNumber() {
+  const formattedNumber = "+223 77 12 13 14";
+  const rawNumber = "+22377121314";
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(formattedNumber).catch(() => {
+      fallbackCopy(formattedNumber);
+    });
+  } else {
+    fallbackCopy(formattedNumber);
+  }
+
+  // Button visual animation
+  const btn = document.getElementById('btnCopyNum');
+  const btnText = document.getElementById('btnCopyText');
+  const btnIcon = document.getElementById('btnCopyIcon');
+  if (btn && btnText) {
+    btn.classList.add('copied');
+    btnText.textContent = TRANSLATIONS[currentLang]["modal_don_btn_copied"] || "Copié !";
+    if (btnIcon) btnIcon.textContent = "✅";
+    setTimeout(() => {
+      btn.classList.remove('copied');
+      btnText.textContent = TRANSLATIONS[currentLang]["modal_don_btn_copy"] || "Copier le numéro";
+      if (btnIcon) btnIcon.textContent = "📋";
+    }, 2500);
+  }
+
+  // Floating Toast notification
+  const toastMsg = MESSAGES[currentLang]?.copied_toast || `📋 Numéro (${formattedNumber}) copié !`;
+  const popup = document.createElement('div');
+  popup.style.cssText = `
+    position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%);
+    background: #0F0A04; color: #F5C518; padding: 14px 28px; border-radius: 999px;
+    font-size: 0.9rem; font-weight: 700; z-index: 99999; 
+    border: 1px solid rgba(245,197,24,0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); animation: fadeIn 0.3s ease;
+  `;
+  popup.textContent = toastMsg;
+  document.body.appendChild(popup);
+  setTimeout(() => popup.remove(), 3000);
+}
+
+function fallbackCopy(text) {
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  textArea.style.position = "fixed";
+  textArea.style.opacity = "0";
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  try {
+    document.execCommand('copy');
+  } catch (err) {}
+  document.body.removeChild(textArea);
 }
 
 function closeDonationModal(e) {
