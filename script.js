@@ -18,7 +18,7 @@ const TRANSLATIONS = {
     "hero_slogan_oui": "Oui",
     "hero_title_for": " pour une",
     "hero_title_highlight": "Enfance Noble",
-    "hero_subtitle": "OPEN MALI est la première association humanitaire de jeunes du Mali. Depuis 2002, nous œuvrons dans l'éducation, la santé, les droits humains...",
+    "hero_subtitle": "OPEN MALI est la première association humanitaire de jeunes au Mali. Depuis 2002, nous œuvrons dans l'éducation, la santé, les droits humains...",
     "hero_btn_donate": "Faire un don",
     "hero_btn_volunteer": "Rejoindre l'équipe",
     "hero_btn_discover": "Découvrir notre mission",
@@ -32,7 +32,7 @@ const TRANSLATIONS = {
     "about_label": "Qui sommes-nous",
     "about_title": "La première association humanitaire de jeunes au Mali",
     "about_p1": "L'association <strong>« Oui, Pour une Enfance Noble Mali »</strong>, en abrégé <strong>OPEN Mali</strong>, est la première association humanitaire de jeunes au Mali, fondée en <strong>2002 à Bamako</strong> par six jeunes lycéens de 15 à 16 ans. C'est une association à but non lucratif, humanitaire, apolitique et laïque disposant d'un récépissé délivré par le <em>Ministère de l'Administration Territoriale et des Collectivités Locales</em>.",
-    "about_p2": "Elle a été érigée en <strong>ONG</strong> par la signature de l'accord-cadre du <strong>25 juin 2019</strong> avec le Gouvernement de la République du Mali, modifié par l'avenant du <strong>13 février 2026</strong>. OPEN Mali est membre du Conseil Économique et Social (ECOSOCC) de l'Union Africaine dont elle assure la présidence depuis février 2025. Elle a également le statut consultatif auprès du Conseil Économique, Social et Culturel (ECOSOC) des Nations Unies.",
+    "about_p2": "Elle a été érigée en <strong>ONG</strong> par la signature de l'accord-cadre du <strong>25 juin 2019</strong> avec le Gouvernement de la République du Mali, modifié par l'avenant du <strong>13 février 2026</strong>. OPEN Mali est membre du <strong>Conseil Économique, Social et Culturel (ECOSOCC)</strong> de l'Union Africaine dont elle assure la présidence depuis février 2025. Elle a également le statut consultatif auprès du <strong>Conseil Économique et Social (ECOSOC)</strong> des Nations Unies.",
     "about_p3": "OPEN Mali a siégé au sein de l'<strong>Équipe Humanitaire Pays (EHP)</strong>, déléguée par la plateforme des ONG Nationales actives dans l'humanitaire <strong>(PONAH)</strong>. Elle est membre de plusieurs <em>Clusters</em>.",
     "about_mission_title": "Notre Mission",
     "about_mission_desc": "La mission de l'association/ONG OPEN Mali est de venir en aide aux personnes en situation difficile touchées par la pauvreté, les violences, les conflits, les catastrophes naturelles et climatiques. Elle apporte son assistance aux personnes qui en ont besoin en les aidant à accéder à leurs droits les plus élémentaires et à construire un avenir durable.",
@@ -321,7 +321,7 @@ const TRANSLATIONS = {
 
     // Footer
     "footer_tagline": "« Oui, Pour une Enfance Noble »",
-    "footer_desc": "Première ONG humanitaire de jeunes du Mali, fondée en 2002. Nous œuvrons pour l'éducation, la santé et la dignité des populations maliennes.",
+    "footer_desc": "Première association humanitaire de jeunes au Mali, fondée en 2002. Nous œuvrons pour l'éducation, la santé et la dignité des populations maliennes.",
     "footer_group_org": "L'organisation",
     "footer_link_about": "Qui sommes-nous",
     "footer_link_history": "Notre histoire",
