@@ -1367,7 +1367,7 @@ body {
 .news-content { padding: 24px; }
 .news-date { font-size: 0.8rem; color: var(--gray-400); margin-bottom: 10px; }
 .news-card h3 { font-size: 0.98rem; font-weight: 700; color: var(--gray-800); line-height: 1.4; margin-bottom: 10px; }
-.news-card p  { font-size: 0.87rem; color: var(--gray-500); line-height: 1.6; margin-bottom: 14px; }
+.news-card p  { font-size: 0.87rem; color: var(--gray-500); line-height: 1.6; margin-bottom: 0; }
 .news-link {
   color: var(--yellow-600);
   font-size: 0.87rem;
