@@ -1165,7 +1165,8 @@ function share(platform) {
   const url = 'https://openmali.org';
   const urls = {
     facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
-    twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`,
+    twitter: `https://x.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`,
+    x: `https://x.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`,
     whatsapp: `https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`
   };
   if (urls[platform]) {
